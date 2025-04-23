@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo">Dashboard</h1>
+        <div class="dashboard-content">
+            <div class="date-section">
+                <h2><span id="fecha"></span> <span id="hora"></span></h2>
+                <div class="flex">
+                    <table class="objetivos">
+                        <tr>
+                            <th>Día de la semana</th>
+                            <th>Objetivo</th>
+                            <th>Cantidad</th>
+                        </tr>
+                        <tr>
+                            <td>Lunes</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Martes</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Miercoles</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Jueves</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Viernes</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <table class="validacion">
+                        <tr>
+                            <th>Validado</th>
+                            <th>No validado</th>
+                            <th>Cuarentena</th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <table class="pv">
+                        <tr>
+                            <th>PV actual</th>
+                        </tr>
+                        <tr><td></td></tr>
+                    </table>
+                </div>
+                <table class="valizas">
+                    <tr>
+                        <th>Horas</th>
+                        <th>Puesto 1</th>
+                        <th>Puesto 2</th>
+                        <th>Puesto 3</th>
+                        <th>Puesto 4</th>
+                        <th>Puesto 5</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr>
+                        <td>07:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td id="total-7">0</td>
+                    </tr>
+                    <tr>
+                        <td>08:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td id="total-8">0</td>
+                    </tr>
+                    <tr>
+                        <td>09:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td id="total-9">0</td>
+                    </tr>
+                    <tr>
+                        <td>10:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td id="total-10">0</td>
+                    </tr>
+                    <tr>
+                        <td>11:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td id="total-11">0</td>
+                    </tr>
+                    <tr>
+                        <td>12:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td id="total-12">0</td>
+                    </tr>
+                    <tr>
+                        <td>13:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td id="total-13">0</td>
+                    </tr>
+                    <tr>
+                        <td>14:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td id="total-14">0</td>
+                    </tr>
+                    <tr>
+                        <td>15:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td id="total-15">0</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total día</strong></td>
+                        <td id="total-p1">0</td>
+                        <td id="total-p2">0</td>
+                        <td id="total-p3">0</td>
+                        <td id="total-p4">0</td>
+                        <td id="total-p5">0</td>
+                        <td></td>
+                    </tr>
+                </table>
+                <button id="btn-actualizar" class="btn-refresh" onclick="actualizarDashboard()">Actualizar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simulación de datos para el dashboard
+        let data = [
+            {
+                fecha: new Date().toLocaleDateString(),
+                hora:new Date().toLocaleTimeString(),
+                horas: []
+            }
+        ];
+        
+        // Pintar la fecha actual en el dashboard
+        const hoy=document.getElementById('fecha') 
+        hoy.textContent=`${data[0].fecha}`
+
+        // Pintar la hora
+        const hora=document.getElementById('hora')
+        hora.textContent= `${data[0].hora}`
+
+        // Btn actualizar
+        let btnActualizar = document.getElementById('btn-actualizar')
+
+        // Función btn-actualizar
+        function actualizarDashboard(){
+            alert("Dashboard actualizado")
+        }
+
+    </script>
+</body>
+</html>
